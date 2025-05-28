@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ming yi Web Testing </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            body {background-color: powderblue;}
+            h1 {color: red;}
+            p {color: blue;}
+            .menu{
+                font-weight: bold;
+            }
+            .toggle {
+                --width: 50px;
+                --height: calc(var(--width) / 2);
+                --border-radius: calc(var(--height) / 2);
+
+                display: inline-block;
+                cursor: pointer;
+            }
+
+            .toggle__input {
+                display: none;
+            }
+
+            .toggle__fill {
+                position: relative;
+                width: var(--width);
+                height: var(--height);
+                border-radius: var(--border-radius);
+                background: #dddddd;
+                transition: background 0.2s;
+            }
+
+            .toggle__input:checked ~ .toggle__fill {
+                background: #009578;
+            }
+
+            .toggle__fill::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: var(--height);
+                width: var(--height);
+                background: #ffffff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+                border-radius: var(--border-radius);
+                transition: transform 0.2s;
+            }
+
+            .toggle__input:checked ~ .toggle__fill::after {
+                transform: translateX(var(--height));
+            }
+
+        </style>
+        
+        <h1>Hệ Thống phun tưới tự động</h1>
+        <p>This is a paragraph.</p>
+
+        </head>
+    <body>
+
+        <div class="container-fluid">
+            <h2>Trạng Thái thiết bị:</h2>
+
+            <div class="row">
+                <div class="col-sm-3"><b>Nhánh tưới 1 </b></div> <br>
+                <div class="col-sm-3"></div><br> 
+                <div class="col-sm-3"><b>Nhánh tưới 2 </b></div><br>
+                <div class="col-sm-3"></div><br>                     
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="RainSen1"> <b>Cảm biến mưa 1:</b> </label><br>
+                </div>
+                <div class="col-sm-3"> <b>RainSensor1 Value </b></div>
+                <div class="col-sm-3">
+                    <label for="RaniSen2"> <b>Cảm biến mưa 2: </b></label><br>
+                </div>
+                <div class="col-sm-3"> <b>RainSensor2 Value </b></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="FlowRate1"> <b>Lưu lượng nhánh 1:</b></label><br>
+                </div>
+                <div class="col-sm-3"><b>FlowRate1 Value </b></div>
+                <div class="col-sm-3">
+                    <label for="FlowRate2"> <b>Lưu lượng nhánh 2:</b></label><br>
+                </div>
+                <div class="col-sm-3"><b>FlowRate2 Value </b></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="Volume1"> <b>Thể tích nhánh 1:</b></label><br>
+                </div>
+                <div class="col-sm-3"><b>Volume1 Value </b></div>
+                <div class="col-sm-3">             
+                    <label for="Volume2"> <b>Thể tích nhánh 2:</b></label><br>
+                </div>
+                <div class="col-sm-3"><b>Volume2 Value </b></div>
+            </div>
+        </div>
+
+    <div class="container-fluid">
+        <h2>Điều kiển thiết bị:</h2>
+        <form method="post"></form>
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="Pump"><b> Bơm nước:</b></label>
+            </div>
+            <div class="col-sm-3">
+                <label class="toggle" for="TgglPmp">
+                    <input class="toggle__input" name="" type="checkbox" id="TgglPmp">
+                    <div class="toggle__fill"></div>
+                </label> <br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="Branch1"> <b> Nhánh 1: </b></label>
+            </div>
+            <div class="col-sm-3">
+                <label class="toggle" for="TgglBr1">
+                    <input class="toggle__input" name="" type="checkbox" id="TgglBr1">
+                    <div class="toggle__fill"></div>
+                </label> <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="Branch2"> <b> Nhánh 2:</b> </label>
+            </div>
+            <div class="col-sm-3">
+                <label class="toggle" for="TgglBr2">
+                    <input class="toggle__input" name="" type="checkbox" id="TgglBr2">
+                    <div class="toggle__fill"></div>
+                </label> <br>
+            </div>
+        </div>
+        </form>
+    </div>
+
+        <!----Header-->
+        <!----<h1>This is a Heading</h1>--->
+        <div class=header>
+        
+            Header
+        </div>
+         <!----Header-->
+         <!----Main-->
+        <div class=Content>
+            <ul class="menu">
+                <li>
+                    ltem 1
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    ltem 2
+                </li>
+            </ul>
+
+            <div class=lef-col>
+                Cot trai
+                </div>
+            <div class=right-col>
+                Cot phai
+                </div>
+        </div>
+        <!----end Main-->
+        <div class=footer>
+            <p>Copyright © mingyi</p>
+        </div>
+         <!----end footer-->
+    </body>
+    
+</html>

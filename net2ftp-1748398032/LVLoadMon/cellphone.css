@@ -1,0 +1,21 @@
+body {background-color: lightblue;}
+input {
+      width: 100%; 
+      font-size: 1.4em; 
+      margin: 20px 40px;
+      padding: 20px 20px; 
+      display: inline-block;
+}
+
+h1 {
+      color: red; 
+      text-align: center;
+      font-family: Arial;
+      font-size: 100px;
+} 
+
+p {
+      margin: 30px 30px;
+      font-family:verdana;
+      font-size: 70px;
+}
